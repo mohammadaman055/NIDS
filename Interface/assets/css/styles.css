@@ -63,6 +63,7 @@ img {
 
 .login__form {
   position: relative;
+  /* left: 100px; */
   margin-inline: 1.5rem;
   background-color: hsla(0, 0%, 100%, .01);
   border: 2px solid hsla(0, 0%, 100%, .7);
@@ -186,4 +187,34 @@ img {
     margin-bottom: 2rem;
   }
   
+}
+
+ input[type="file"] {
+   display: none;
+ }
+
+.my_class{
+  display: flex;
+  flex-direction: row;
+  margin-block: inherit;
+  justify-items: auto;
+}
+
+.uploadcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: auto;
+    background-color: hsla(0, 0%, 100%, .01);
+    border: 2px solid hsla(0, 0%, 100%, .7);
+    padding: 2.5rem 1rem;
+    color: var(--white-color);
+    border-radius: 1rem;
+    backdrop-filter: blur(16px);
+    padding-bottom:40px;    
+}
+
+.formcard{
+    margin-inline: 10.5rem;
 }

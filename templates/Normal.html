@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Intrusion Detection Result</title>
+    <style>
+        body {
+            background-color: #4CAF50;
+            /* Green background color */
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>No Threat Detected</h1>
+    <img src="{{ url_for('static', filename='img/normal.png') }}" alt="Green Checkmark Image">
+    <p>Your network is secure. No threat was detected.</p>
+</body>
+
+</html>

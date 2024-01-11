@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script>
+        function redirectToOtherWebsite() {
+            window.location.href = "{{ url_for('radar') }}";
+        }
+    </script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <title>Login form </title>
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='img/binary.jpg') }}" alt="image" class="login__bg2">
+    <div class="Detectcomponent">
+        <div class="my_class">
+            <form action="/ML_detect" method="post" class="login__form" onsubmit="redirectToOtherWebsite()">
+                <h1 class="login__title">Analysis</h1>
+                {% for column in selected_columns %}
+                <div class="login__inputs">
+                    <div class="login__box">
+                        <input type="text" name="{{ column }}" placeholder="{{ column }}" class="login__input"><br>
+                    </div>
+                </div>
+                {% endfor %}
+                <button type="submit" class="login__button">Detect</button>
+            </form>
+        </div>
+
+        <div class="uploadcard">
+            <form action="/filepredict" method="post" enctype="multipart/form-data" onsubmit="redirectToOtherWebsite()">
+                <label for="fileInput" class="login__button">Upload</label>
+                <input type="file" name="file" id="fileInput" accept=".csv" style="display: none;"
+                    class="login__button login__box"><br><br><br>
+                <span id="selectedFileName"></span>
+                <button type="submit" class="login__button ">Detect</button>
+            </form>
+        </div>
+
+        <script>
+            document.getElementById('fileInput').addEventListener('change', function () {
+                var fileName = this.files[0].name;
+                document.getElementById('selectedFileName').innerText = fileName;
+            });
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,14 +1,13 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 
 :root {
-  
-  
+
+
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
 
-  
+
   --body-font: "Poppins", sans-serif;
   --h1-font-size: 2rem;
   --normal-font-size: 1rem;
@@ -29,7 +28,7 @@ button {
   font-size: var(--normal-font-size);
 }
 
-body{
+body {
   background-color: black;
 }
 
@@ -49,7 +48,7 @@ img {
   height: 100vh;
   display: grid;
   align-items: center;
-  
+
 }
 
 .login__bg {
@@ -58,7 +57,7 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  
+
 }
 
 .login__form {
@@ -79,7 +78,7 @@ img {
   margin-bottom: 1.25rem;
 }
 
-.login__inputs, 
+.login__inputs,
 .login__box {
   display: grid;
 }
@@ -98,7 +97,7 @@ img {
   border-radius: 4rem;
 }
 
-.login__input, 
+.login__input,
 .login__button {
   border: none;
   outline: none;
@@ -119,7 +118,7 @@ img {
   font-size: 1.25rem;
 }
 
-.login__check, 
+.login__check,
 .login__check-box {
   display: flex;
   justify-content: space-between;
@@ -179,42 +178,70 @@ img {
   .login {
     justify-content: center;
   }
+
   .login__form {
     width: 420px;
     padding-inline: 2.5rem;
   }
+
   .login__title {
     margin-bottom: 2rem;
   }
-  
+
 }
 
- input[type="file"] {
-   display: none;
- }
+input[type="file"] {
+  display: none;
+}
 
-.my_class{
+.my_class {
   display: flex;
   flex-direction: row;
   margin-block: inherit;
   justify-items: auto;
 }
 
-.uploadcard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-block: auto;
-    background-color: hsla(0, 0%, 100%, .01);
-    border: 2px solid hsla(0, 0%, 100%, .7);
-    padding: 2.5rem 1rem;
-    color: var(--white-color);
-    border-radius: 1rem;
-    backdrop-filter: blur(16px);
-    padding-bottom:40px;    
+.uploadcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: auto;
+  background-color: hsla(0, 0%, 100%, .01);
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding: 4.5rem 5rem;
+  color: var(--white-color);
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+  padding-bottom: 40px;
 }
 
-.formcard{
-    margin-inline: 10.5rem;
+.formcard {
+  margin-inline: 10.5rem;
+}
+
+.Detectcomponent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-block: auto;
+  background-color: hsla(0, 0%, 100%, .01);
+  border: 2px solid hsla(0, 0%, 100%, .7);
+  padding: 2.5rem 1rem;
+  color: var(--white-color);
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+  padding-bottom: 40px;
+}
+
+.login__bg2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
 }

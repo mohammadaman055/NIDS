@@ -61,7 +61,7 @@ data = pd.read_csv('/path/to/dataset.csv')
 rfe = RFE(estimator=dt_model, n_features_to_select=15)
 X_train_rfe = rfe.fit_transform(X_train, y_train)
 
-# Save the trained Random Forest model
+# Save the trained model
 with open('NIDS_mapped_model.pkl', 'wb') as model_file:
     pickle.dump(rf_model, model_file)
 ```
@@ -101,4 +101,29 @@ from email_module import send_email
 # Trigger an email alert
 send_email('Attack Detected', 'SQL Injection', 2)
 ```
+
+## Getting Started
+
+These instructions will help you set up and run the project on your local machine.
+
+### Prerequisites
+
+- Python 3.11.3
+- [Virtual environment](https://docs.python.org/3/library/venv.html) (recommended)
+
+### Installation
+
+1. Clone the repository:
+2. Navigate to the project directory
+3. Create and activate a virtual environment (optional but recommended)
+4. Install the project dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Running the Project
+   ```bash
+      python app.py
+   ```
+6. Open your web browser and go to http://localhost:5000/ to view the application.
+
 
